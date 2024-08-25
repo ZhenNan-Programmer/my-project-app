@@ -5,5 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   plugins: [react()],
   // set your base to your folder name
-  base: '/ZhenNanProject',
+  base: '/my-project-app',
 })
