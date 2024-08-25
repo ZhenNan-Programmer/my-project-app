@@ -46,7 +46,7 @@ const StockForm = () => {
   const validateSymbol = useCallback(
     async () => {
       // Online URL
-      // const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${currentSymbol}&apikey=EKBMW04GSC6DJMLO`);
+      const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${currentSymbol}&apikey=EKBMW04GSC6DJMLO`);
   
       // Demo URL
       // Check first the symbol=${currentSymbol.toUpperCase()} from user input
@@ -55,7 +55,7 @@ const StockForm = () => {
       // 1) data["Global Quote"]: This checks if the data object has a property called "Global Quote". If the API call was successful and the data is returned correctly, the "Global Quote" property should exist.
   
       // 2) data["Global Quote"]["01. symbol"] === currentSymbol.toUpperCase(): If the "Global Quote" property exists, this part of the condition checks if the stock symbol returned by the API ("01. symbol") matches the currentSymbol entered by the user.
-      const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${currentSymbol.toUpperCase()}&apikey=demo`);
+      // const response = await fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${currentSymbol.toUpperCase()}&apikey=demo`);
       const data = await response.json();
       // Debugging use
       // console.log("Look here 1 ", data["Global Quote"]);
