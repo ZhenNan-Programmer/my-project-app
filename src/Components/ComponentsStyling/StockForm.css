@@ -1,0 +1,57 @@
+.user-input input {
+  margin-right: 25px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+/* For remove outer and inner of input type number */
+/* https://www.w3schools.com/howto/howto_css_hide_arrow_number.asp */
+/* .user-input .quantity::-webkit-outer-spin-button,
+.user-input .quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+} */
+
+.user-input .addstock-button {
+  border: none;
+  border-radius: 5px;
+  background-color: red;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all ease-in-out 0.1s;
+}
+
+.addstock-button:hover {
+  box-shadow: 4px 4px 5px white;
+  background-color: white;
+  color: red;
+}
+
+.addstock-button:active {
+  box-shadow: none;
+  background-color: red;
+  color: white;
+}
+
+@media all and (max-width: 943px) {
+  .user-input {
+    display: flex;
+  }
+}
+
+@media all and (max-width: 893px) {
+  .user-input {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-input input {
+    margin: 10px 0px;
+  }
+
+  .user-input .addstock-button {
+    margin-top: 10px;
+  }  
+}

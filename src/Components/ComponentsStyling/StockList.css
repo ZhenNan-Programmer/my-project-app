@@ -1,0 +1,33 @@
+.stocklist-container {
+  margin-top: 30px;
+}
+
+.stocklist-container h2{
+  font-size: 40px;
+}
+
+.stocklist-container .stock-data p {
+  display: flex;
+}
+
+.stock-data {
+  padding: 10px;
+  border: 2px solid white;
+  box-shadow: 5px 5px 10px white;
+  margin-top: 30px;
+}
+
+.stock-data .profit-display {
+  color: green;
+}
+
+.stock-data .loss-display {
+  color: red;
+}
+
+@media all and (max-width: 943px) {
+  .content-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
