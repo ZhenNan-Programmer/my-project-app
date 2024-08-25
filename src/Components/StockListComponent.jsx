@@ -9,12 +9,11 @@ const StockList = () => {
   const {symbolInput, isSymbolValid, stockList} = useContext(AppContext);
   
   useEffect( () => {
-    // Online URL
-    // fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbolInput}&apikey=EKBMW04GSC6DJMLO`)
-
-    // Demo URL
     if (stockList.length > 0) {
-      fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=demo`)
+      // Online URL
+      fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=${symbolInput}&apikey=EKBMW04GSC6DJMLO`)
+      // Demo URL
+      // fetch(`https://www.alphavantage.co/query?function=GLOBAL_QUOTE&symbol=IBM&apikey=demo`)
       .then(response => response.json())
       .then(data => {
         console.log("Data: ", data);
