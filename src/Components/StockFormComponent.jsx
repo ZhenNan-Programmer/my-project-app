@@ -84,7 +84,12 @@ const StockForm = () => {
       setCurrentQuantity("");
       setCurrentPurchasePrice("");
       return;
-    }else if (!isValid) {
+    } else if (currentQuantity <= 0 || currentPurchasePrice <= 0) {
+      alert("Quantity or Purchase Price cannot be less than 0");
+      setCurrentSymbol("");
+      setCurrentQuantity("");
+      setCurrentPurchasePrice("");
+    } else if (!isValid) {
       alert("Invalid stock symbol. Please try again.");
       setCurrentSymbol("");
       setCurrentQuantity("");
